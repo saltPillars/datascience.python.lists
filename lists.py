@@ -1,58 +1,56 @@
-# Changing, Adding, and Removing Elements
+# List Exercises 1
 
-# Changing is similar to calling and element
-motorcycles = ['honda', 'yamaha', 'suzuki']
-print(motorcycles)
+# 3-4 Guest List
+dinner_list = ['bob', 'chuck', 'ruth', 'jean', 'erin']
+print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
 
-motorcycles[0] = 'ducati'
-print(motorcycles)
+# 3-5 Changing Guest List
+unavailable = dinner_list.pop(3)
+print(f"\nOh no! {unavailable.title()} isn't able to make it!")
+dinner_list.insert(3, 'jill')
+print(f"{dinner_list[3].title()} is available to take their place.")
+print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
 
-# .append adds an element to a list
-motorcycles.append('honda')
-print(motorcycles)
+# 3-6 More Guests
+print(f"\nGREAT NEWS! I've found a bigger table!")
+dinner_list.insert(0, 'Alaina')
+dinner_list.insert(2, 'Marc')
+dinner_list.append('Brian')
+print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[5].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[6].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[7].title()}, I would like to invite you to dinner.")
 
-# Empty lists can be created and elements can be added dynamically
-motorcycles = []
-motorcycles.append('yamaha')
-motorcycles.append('suzuki')
-motorcycles.append('honda')
-motorcycles.append('ducati')
-print(motorcycles)
+# 3-7 Shrinking Guest List
+print(f"\nI'm sorry guys, my new table wont be here in time.")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+cut = dinner_list.pop()
+print(f"Dear {cut.title()}, I'm sorry, but you're cut")
+print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
+print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
 
-# Elements can be inserted at any position using .insert()
-# Elements are shifted one "down" the list
-motorcycles.insert(0, 'harley')
-print(motorcycles)
+del dinner_list[0]
+del dinner_list[0]
 
-# Elements can be removed with del
-# Remaining elements are shifted "up" the list
-# Removed elements are permanently removed and no longer accessible
-del motorcycles[0]
-print(motorcycles)
-
-# The .pop() method removes the element and makes it accessible
-# popping an element comes off the top (end) of the stack
-popped_motorcycle = motorcycles.pop()
-print(motorcycles)
-print(popped_motorcycle)
-
-# We can also pop from any position in the list
-first_owned = motorcycles.pop(0)
-print(f"The first motorcycle I owned was a {first_owned.title()}")
-print(motorcycles)
-
-# .remove() will remove an element by the value rather than position
-motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
-print(motorcycles)
-
-motorcycles.remove('ducati')
-print(motorcycles)
-
-# you can use stored strings to provide the value to remove
-motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
-print(motorcycles)
-
-too_expensive = 'ducati'
-motorcycles.remove(too_expensive)
-print(motorcycles)
-print(f"\nA {too_expensive.title()} is too expensive for me.")
+print(dinner_list)
