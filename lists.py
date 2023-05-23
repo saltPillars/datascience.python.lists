@@ -1,56 +1,38 @@
-# List Exercises 1
+# Organizing Lists
 
-# 3-4 Guest List
-dinner_list = ['bob', 'chuck', 'ruth', 'jean', 'erin']
-print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
+# .sort() permanently organizes the list in ascending order
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
 
-# 3-5 Changing Guest List
-unavailable = dinner_list.pop(3)
-print(f"\nOh no! {unavailable.title()} isn't able to make it!")
-dinner_list.insert(3, 'jill')
-print(f"{dinner_list[3].title()} is available to take their place.")
-print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
+cars.sort()
+print(cars)
 
-# 3-6 More Guests
-print(f"\nGREAT NEWS! I've found a bigger table!")
-dinner_list.insert(0, 'Alaina')
-dinner_list.insert(2, 'Marc')
-dinner_list.append('Brian')
-print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[2].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[3].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[4].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[5].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[6].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[7].title()}, I would like to invite you to dinner.")
+# .sort(reverse=True) permanently organizes the list in descending order
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(f"\n{cars}")
 
-# 3-7 Shrinking Guest List
-print(f"\nI'm sorry guys, my new table wont be here in time.")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-cut = dinner_list.pop()
-print(f"Dear {cut.title()}, I'm sorry, but you're cut")
-print(f"Dear {dinner_list[0].title()}, I would like to invite you to dinner.")
-print(f"Dear {dinner_list[1].title()}, I would like to invite you to dinner.")
+cars.sort(reverse=True)
+print(cars)
 
-del dinner_list[0]
-del dinner_list[0]
+# .sorted() temporarily organizes lists
+# .sorted(reverse=True) works here as well
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print("\nHere is the original list:")
+print(f"{cars}")
 
-print(dinner_list)
+print("Here is the sorted list:")
+print(sorted(cars))
+
+print("Here is the original list again:")
+print(f"{cars}")
+
+# .reverse() permanently organizes list in reverse of original order
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(f"\n{cars}")
+
+cars.reverse()
+print(cars)
+
+# len() returns the length of a list
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(f"\n {len(cars)}")
