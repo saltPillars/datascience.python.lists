@@ -1,25 +1,16 @@
-# List Exercises 2
+# Avoiding Index Errors
 
-# 3-8 Seeing the World
-travel_locations = ['japan', 'greece', 'germany', 'wales']
-print(travel_locations)
-print("\nsorted()")
-print(sorted(travel_locations))
-print(travel_locations)
-print(sorted(travel_locations, reverse=True))
-print(travel_locations)
+# Index errors are common. Occur when trying to access an element that doesn't exist
+motorcycles = ['honda', 'yamaha', 'suzuki']
 
-travel_locations.reverse()
-print("\nreverse()")
-print(travel_locations)
-travel_locations.reverse()
-print(travel_locations)
+# results in index error due to no element at index 3
+print(motorcycles[3])
 
-travel_locations.sort()
-print("\nsort()")
-print(travel_locations)
-travel_locations.sort(reverse=True)
-print(travel_locations)
+# Use bult in index indicators to avoid
+print(motorcycles[-1])
 
-# 3-9 Locations
-print(f"\nI want to travel to {len(travel_locations)} locations!")
+# The only time -1 will result in index error is if list is empty
+motorcycles = []
+print(motorcycles[-1])
+
+# If index errors occur and you cant figure it out print the list and trace data
